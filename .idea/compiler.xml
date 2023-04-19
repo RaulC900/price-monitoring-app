@@ -7,17 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="price-monitoring" />
+        <module name="web-price-scraper" />
         <module name="price-updater" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="web-price-scraper" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="price-monitoring" options="-parameters" />
+      <module name="price-monitoring" options="" />
       <module name="price-updater" options="-parameters" />
       <module name="web-price-scraper" options="-parameters" />
     </option>
