@@ -65,10 +65,13 @@ psql -v ON_ERROR_STOP=1 --username "${POSTGRES_USER}" --dbname "${POSTGRES_DB}" 
     CREATE TABLE product_price_history (
     	id integer NOT NULL,
     	product_id integer NOT NULL,
+    	store_id integer NOT NULL,
     	date date NOT NULL,
     	price integer NOT NULL,
     	FOREIGN KEY (product_id)
-    		REFERENCES product(id)
+    		REFERENCES product(id),
+		FOREIGN KEY (store_id)
+			REFERENCES store(id)
     );
     INSERT INTO user_role (id, role_name) VALUES (0, 'admin');
     INSERT INTO user_role (id, role_name) VALUES (1, 'visitor');
